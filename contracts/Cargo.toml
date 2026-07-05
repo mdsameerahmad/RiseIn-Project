@@ -1,0 +1,16 @@
+[workspace]
+resolver = "2"
+members = [
+    "escrow",
+    "reputation",
+    "dispute"
+]
+
+[profile.release]
+opt-level = "z"
+overflow-checks = true
+debug = false
+strip = true
+lto = true
+codegen-units = 1
+panic = "abort"
